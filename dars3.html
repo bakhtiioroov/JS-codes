@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+            color: blue;
+            text-align: center;
+        }
+        b {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1 id="js"></h1>
+    <p>JS 2chi dars. Array bilan ishlash darsi. Birinchi scriptla: ["Javascript"] ["C++"] ["Python"] <b>React,Java,C# ga uzgartirildi</b></p>
+    </div>
+    <script>
+        let dasturlash=["Javascript"]
+        dasturlash[1]="C++"
+        dasturlash[2]="Python"
+
+        dasturlash[0]="React"
+        dasturlash[1]="Java"
+        dasturlash[2]="C#"
+
+        document.getElementById("js").innerHTML = dasturlash;
+    </script>
+</body>
+</html>

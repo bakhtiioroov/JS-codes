@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100%;
+            height: 100px;
+            background-color: aqua;
+            color: blue;
+            text-align: center;
+        }
+        b {
+            color: blue;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="js"></h1>
+        <p>Bu dars console.log bilan bajarlgan. Darsda <b>Object</b> bilan ishlangan. <b>"JavaScript"</b> uzgaruvchisidagi ma'lumotlarni qaytadan o'zgartirildi va Array ga qo'shimcha ma'umot qo'shildi</p>
+    </div>
+    <script>
+        var JavaScript={yili:"1995"}
+        JavaScript.yaratuvchisi="Брендан Эйх"
+        JavaScript.kengaytma=[".js,"]
+        JavaScript.frontend=true
+
+        JavaScript.yili="1995-itc"
+        JavaScript.yaratuvchisi="Brendan Eich"
+        JavaScript.kengaytma[1]=".cjs,"
+
+        document.getElementById("js").innerHTML = JavaScript;
+        console.log(JavaScript)
+    </script>
+</body>
+</html>
