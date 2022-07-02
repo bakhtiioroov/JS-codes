@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(kk.png);
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 490px;
+    border-radius: 10px;
+    position: relative;
+    top: 130px;
+    background: rgb(0, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+}
+.row{
+    position: relative;
+    left: 23px;
+    top: -15px;
+}
+button{
+    width: 60px;
+    height: 60px;
+    color:white;
+    font-size: 21px;
+    border-radius: 15px;
+    margin-top: 5px;
+    background: inherit;
+    border: 1px solid rgb(255, 0, 0);
+    transition: .3s ease;
+}
+button:hover{
+    background: rgb(44, 44, 44);
+}
+.inp{
+    width: 250px;
+    height: 70px;
+    color: rgb(255, 0, 0);
+    font-size: 45px;
+    text-align: right;
+    background: inherit;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 0, 0);
+    outline: none;
+    background: rgb(39, 37, 37);
+}
+.tenglik{
+    width: 125px;
+}
+.amal{
+    background: rgb(41, 39, 39);
+}
+    </style>
+    <title>kankulator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <input id="input1" type="text" class="inp" placeholder="0">
+        </div>
+        <div class="row">
+            <button onclick="reset()" class="amal">C</button>
+            <button onclick="numCatch(this)" value="(" class="amal">(</button>
+            <button onclick="numCatch(this)" value=")" class="amal">)</button>
+            <button onclick="numCatch(this)" value="/" class="amal">/</button>
+        </div>
+        <div class="row">
+           <button onclick="numCatch(this)" value="1">1</button>
+           <button onclick="numCatch(this)" value="2">2</button>
+           <button onclick="numCatch(this)" value="3">3</button>
+           <button onclick="numCatch(this)" value="*" class="amal">*</button>
+       </div>
+       <div class="row">
+           <button onclick="numCatch(this)" value="4">4</button>
+           <button onclick="numCatch(this)" value="5">5</button>
+           <button onclick="numCatch(this)" value="6">6</button>
+           <button onclick="numCatch(this)" value="-" class="amal">-</button>
+       </div>
+        <div class="row">
+            <button onclick="numCatch(this)" value="7">7</button>
+            <button onclick="numCatch(this)" value="8">8</button>
+            <button onclick="numCatch(this)" value="9">9</button>
+            <button onclick="numCatch(this)" value="+" class="amal">+</button>
+        </div>
+        <div class="row">
+            <button onclick="numCatch(this)" value="0">0</button>
+            <button onclick="barobar()" value="=" class="tenglik">=</button>
+            <button onclick="numCatch(this)" value="%" class="amal">%</button>
+        </div>
+    </div>
+<script>
+    function numCatch(a){
+    let inp=document.getElementById('input1');
+    inp.value=inp.value+a.value;
+}
+function barobar(){
+    let r=document.getElementById('input1');
+    r.value=eval(r.value);
+}
+function reset(){
+    let res=document.getElementById('input1');
+    res.value="";
+}
+</script>
+</body>
+</html>
